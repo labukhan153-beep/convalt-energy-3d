@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05070a;
+  --foreground: #e8edf2;
+  --muted: #8b98a8;
+  --accent: #3dd6c6;
+  --accent-warm: #d4a25a;
+  --line: rgba(232, 237, 242, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-warm: var(--accent-warm);
+  --color-line: var(--line);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+.bg-atmosphere {
+  background:
+    radial-gradient(1200px 700px at 50% 18%, rgba(61, 214, 198, 0.14), transparent 58%),
+    radial-gradient(900px 520px at 80% 80%, rgba(212, 162, 90, 0.08), transparent 55%),
+    linear-gradient(180deg, #070b10 0%, #05070a 48%, #030406 100%);
+}
+
+.energy-grid {
+  background-image:
+    linear-gradient(rgba(232, 237, 242, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 237, 242, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse at center, black 18%, transparent 72%);
+}
+
+.energy-horizon {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(61, 214, 198, 0.05) 42%,
+    rgba(5, 7, 10, 0.92) 100%
+  );
+}
+
+.energy-core {
+  background: radial-gradient(
+    circle,
+    rgba(61, 214, 198, 0.16) 0%,
+    rgba(61, 214, 198, 0.04) 38%,
+    transparent 70%
+  );
+}
